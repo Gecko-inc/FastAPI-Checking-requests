@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+
+  fastapi:
+    container_name: web
+    build: .
+    restart: always
+    volumes:
+      - .:/api_token
+    ports:
+      - "8000:8000"
+volumes:
+  postgres_data:
